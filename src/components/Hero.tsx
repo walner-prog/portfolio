@@ -71,7 +71,7 @@ const Hero: React.FC = () => {
           </motion.a>
 
           <motion.a
-            href="/CV-PROGRAMACION.pdf" // ruta a tu PDF en public/
+            href="IMG/CV-PROGRAMACION.pdf" // ruta a tu PDF en public/
             download="Curriculum_Carlos_Alvarez.pdf" // nombre sugerido para descarga
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
