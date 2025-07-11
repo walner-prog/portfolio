@@ -1,10 +1,9 @@
 # 🚀 Portafolio - Carlos Álvarez
 
 [![Vercel](https://img.shields.io/badge/Deploy-Vercel-black?logo=vercel&style=flat-square)](https://miportfolio.com)
-[![React](https://img.shields.io/badge/React-18-blue?logo=react&style=flat-square)](https://react.dev)
-[![Tailwind](https://img.shields.io/badge/TailwindCSS-3-06b6d4?logo=tailwindcss&style=flat-square)](https://tailwindcss.com)
-[![License](https://img.shields.io/github/license/walner-prog/mi-portfolio?style=flat-square)](./LICENSE)
-
+[![React](https://img.shields.io/badge/React-19-blue?logo=react&style=flat-square)](https://react.dev)
+[![Tailwind](https://img.shields.io/badge/TailwindCSS-4-06b6d4?logo=tailwindcss&style=flat-square)](https://tailwindcss.com)
+ 
 ---
 
 ## 💻 Sobre el proyecto
