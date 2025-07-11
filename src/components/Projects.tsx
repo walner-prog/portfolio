@@ -3,7 +3,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
-import { FaDumbbell, FaServer, FaKey } from 'react-icons/fa';
+import { FaDumbbell, FaServer, FaKey, FaDatabase } from 'react-icons/fa';
 import { motion } from 'framer-motion';
 
 const cardVariants = {
@@ -47,7 +47,7 @@ const Projects: React.FC = () => {
         modules={[Pagination]}
         style={{ paddingBottom: '3rem' }}
       >
-        {/* Slide 1 */}
+        {/* GymApp */}
         <SwiperSlide>
           <motion.div
             className="p-6"
@@ -80,8 +80,8 @@ const Projects: React.FC = () => {
               </p>
 
               <p className="text-gray-400 mb-6">
-                Esta es una landing page moderna diseñada para presentar y promocionar{' '}
-                <strong>GymApp</strong>, un sistema de escritorio que facilita la gestión de gimnasios.
+                Landing page moderna para presentar y promocionar{' '}
+                <strong>GymApp</strong>, un sistema de escritorio para gimnasios.
               </p>
 
               <a
@@ -90,7 +90,7 @@ const Projects: React.FC = () => {
                 rel="noreferrer"
                 className="inline-flex items-center space-x-2 text-cyan-400 font-semibold hover:text-cyan-600 transition-colors duration-300"
               >
-                <span>Ver demo online</span>
+                <span className="p-4">Ver demo online</span>
                 <motion.span
                   className="inline-block"
                   whileHover={{ x: 8 }}
@@ -103,14 +103,9 @@ const Projects: React.FC = () => {
           </motion.div>
         </SwiperSlide>
 
-        {/* Slide 2 */}
+        {/* Gestión Licencias */}
         <SwiperSlide>
-          <motion.div
-            className="p-6"
-            whileHover="hover"
-            initial="rest"
-            animate="rest"
-          >
+          <motion.div className="p-6" whileHover="hover" initial="rest" animate="rest">
             <motion.div
               variants={cardVariants}
               className="relative bg-gray-900 rounded-3xl shadow-xl border border-transparent cursor-pointer group"
@@ -132,7 +127,7 @@ const Projects: React.FC = () => {
               </div>
 
               <p className="text-gray-400 mb-6">
-                Plataforma web para administrar claves de activación y controlar el uso autorizado de GymApp. Consumía API con Node, Express, JWT, SQLite y MySQL.
+                Plataforma web para administrar claves y controlar el uso autorizado del software GymApp. API con Node, Express, JWT, SQLite y MySQL.
               </p>
 
               <a
@@ -141,7 +136,7 @@ const Projects: React.FC = () => {
                 rel="noreferrer"
                 className="inline-flex items-center space-x-2 text-blue-400 font-semibold hover:text-blue-600 transition-colors duration-300"
               >
-                <span>Ver proyecto</span>
+                <span className='p-4'>Ver proyecto</span>
                 <motion.span
                   className="inline-block"
                   whileHover={{ x: 8 }}
@@ -154,14 +149,9 @@ const Projects: React.FC = () => {
           </motion.div>
         </SwiperSlide>
 
-        {/* Slide 3 */}
+        {/* API */}
         <SwiperSlide>
-          <motion.div
-            className="p-6"
-            whileHover="hover"
-            initial="rest"
-            animate="rest"
-          >
+          <motion.div className="p-6" whileHover="hover" initial="rest" animate="rest">
             <motion.div
               variants={cardVariants}
               className="relative bg-gray-900 rounded-3xl shadow-xl border border-transparent cursor-pointer group"
@@ -173,23 +163,52 @@ const Projects: React.FC = () => {
                   filter: 'blur(15px)',
                 }}
               />
-
               <div className="flex items-center mb-4 space-x-4 text-blue-400">
                 <FaServer size={36} />
                 <h4 className="text-2xl font-bold">API Licencias GymApp</h4>
               </div>
-
               <p className="text-gray-400 mb-6">
-                Web service en Node.js + Express con JWT para gestionar licencias del software GymApp, con DB en MySQL y SQLite. Segura, escalable y desplegada en Render.
+                Web service en Node.js + Express con JWT para gestionar licencias de GymApp. DB en MySQL y SQLite, desplegada en Render.
               </p>
-
               <a
                 href="https://api-licencia-gymapp.onrender.com/"
                 target="_blank"
                 rel="noreferrer"
                 className="inline-flex items-center space-x-2 text-blue-400 font-semibold hover:text-blue-600 transition-colors duration-300"
               >
-                <span>Ver API</span>
+                <span className='p-4'>Ver API</span>
+                <motion.span whileHover={{ x: 8 }}>→</motion.span>
+              </a>
+            </motion.div>
+          </motion.div>
+        </SwiperSlide>
+
+        {/* Laravel + Filament */}
+        <SwiperSlide>
+          <motion.div className="p-6" whileHover="hover" initial="rest" animate="rest">
+            <motion.div
+              variants={cardVariants}
+              className="relative bg-gray-900 rounded-3xl shadow-xl border border-transparent cursor-pointer group"
+            >
+              <motion.div
+                className="absolute inset-0 rounded-3xl opacity-0 group-hover:opacity-40 pointer-events-none"
+                style={{
+                  boxShadow: '0 0 20px 4px rgba(0, 200, 255, 0.5)',
+                  filter: 'blur(15px)',
+                }}
+              />
+              <div className="flex items-center mb-4 space-x-4 text-blue-400">
+                <FaDatabase size={36} />
+                <h4 className="text-2xl font-bold">Créditos con Laravel</h4>
+              </div>
+              <p className="text-gray-400 mb-6">
+                Sistema web en Laravel + Filament PHP para gestionar clientes, créditos, abonos, carteras y configuración de usuarios, roles y permisos.
+              </p>
+              <a
+                href="https://codelatam.top"
+                className="inline-flex items-center space-x-2 text-green-400 font-semibold hover:text-blue-600 transition-colors duration-300"
+              >
+                <span className='text-blue-400 p-4'>Demo privada</span>
                 <motion.span whileHover={{ x: 8 }}>→</motion.span>
               </a>
             </motion.div>

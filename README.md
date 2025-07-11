@@ -16,7 +16,7 @@ Este repositorio contiene el código fuente de mi **portafolio personal**, una l
 - 🔍 **ESLint + Prettier** para calidad y consistencia del código
 
 > 🚀 Puedes verlo funcionando aquí:  
-> 👉 **[miportfolio.com](https://miportfolio.com)**
+> 👉 **[miportfolio.com](https://portfolio-1wkx.vercel.app/)**
 
 ---
 
