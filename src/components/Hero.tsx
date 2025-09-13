@@ -43,9 +43,9 @@ const Hero: React.FC = () => {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="text-5xl md:text-6xl font-extrabold mb-6 bg-gradient-to-r from-cyan-400 to-blue-600 bg-clip-text text-transparent"
         >
-          Hola, soy{' '}
+          Hola, soy{'  Carlos Alvarez '}
           <span className="relative after:block after:h-1 after:bg-cyan-400 after:absolute after:left-0 after:bottom-0 after:w-full after:scale-x-0 after:origin-left after:transition-transform after:duration-500 hover:after:scale-x-100">
-            Carlos Alvarez
+           
           </span>
         </motion.h2>
 
@@ -53,10 +53,29 @@ const Hero: React.FC = () => {
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, delay: 0.5 }}
-          className="text-gray-400 mb-8 text-lg md:text-xl"
+          className="text-gray-400 mb-6 text-lg md:text-xl"
         >
-          Ingeniero en Tecnologías de la Información (último año) con experiencia en desarrollo web Full Stack, POO, bases de datos SQL y metodologías ágiles Scrum/Kanban.
+          Ingeniero en Tecnologías de la Información con <b>2 años de experiencia</b> en desarrollo web Full Stack. 
+          Actualmente programo en <b>un entorno empresarial</b>, trabajando con tecnologías como 
+          <b> React, Node.js y Python</b>. Experiencia en POO, bases de datos SQL y metodologías ágiles Scrum/Kanban.
         </motion.p>
+
+        {/* Skills */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.7 }}
+          className="flex flex-wrap gap-3 mb-8 justify-center md:justify-start"
+        >
+          {['React', 'Node.js', 'Python', 'Laravel', 'PostgreSQL', 'MySQL', 'Git', 'Scrum'].map((skill, i) => (
+            <span
+              key={i}
+              className="px-4 py-2 bg-gray-800 text-cyan-400 rounded-full text-sm font-medium shadow-md hover:bg-gray-700 transition"
+            >
+              {skill}
+            </span>
+          ))}
+        </motion.div>
 
         {/* Botones */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
@@ -64,15 +83,15 @@ const Hero: React.FC = () => {
             href="#contact"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.8 }}
+            transition={{ duration: 0.8, delay: 0.9 }}
             className="inline-block px-8 py-3 rounded-full bg-cyan-500 text-white font-semibold shadow-lg hover:bg-cyan-600 transition-colors duration-300 text-center"
           >
             Contáctame
           </motion.a>
 
           <motion.a
-            href="IMG/CV-PROGRAMACION.pdf" // ruta a tu PDF en public/
-            download="Curriculum_Carlos_Alvarez.pdf" // nombre sugerido para descarga
+            href="IMG/miCV-dev.pdf"
+            download="Curriculum_Carlos_Alvarez.pdf"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 1 }}

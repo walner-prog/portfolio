@@ -12,13 +12,13 @@ const About: React.FC = () => {
     const interval = setInterval(() => {
       setIndex((prev) => (prev + 1) % words.length);
       setCurrentWord(words[(index + 1) % words.length]);
-    }, 4000); // tiempo total del ciclo
+    }, 4000);
     return () => clearInterval(interval);
   }, [index]);
 
   return (
     <section id="about" className="relative py-24 max-w-5xl mx-auto px-6">
-      {/* Decoración sutil */}
+      {/* Decoración */}
       <div className="absolute top-0 left-0 w-72 h-72 bg-cyan-600 opacity-20 rounded-full blur-3xl -z-10"></div>
 
       <motion.h3
@@ -30,6 +30,7 @@ const About: React.FC = () => {
       >
         Sobre mí
       </motion.h3>
+
       <motion.p
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -37,22 +38,20 @@ const About: React.FC = () => {
         viewport={{ once: true }}
         className="text-gray-300 leading-8 text-lg md:text-xl text-center max-w-3xl mx-auto"
       >
-        Soy un ingeniero en{" "}
-        <span className="text-cyan-400 font-semibold">
-          Tecnologías de la Información
-        </span>{" "}
-        (último año), con experiencia en
+        Soy un <span className="text-cyan-400 font-semibold">Ingeniero en Tecnologías de la Información</span> 
+        con experiencia en desarrollo web y de aplicaciones. 
+        He trabajado con lenguajes como
         <span className="text-cyan-300 font-semibold"> JavaScript</span>,
         <span className="text-cyan-300 font-semibold"> TypeScript</span>,
-        <span className="text-cyan-300 font-semibold"> HTML</span>,
-        <span className="text-cyan-300 font-semibold"> CSS</span>,
-        <span className="text-cyan-300 font-semibold"> PHP</span> y bases de
-        datos como
+        <span className="text-cyan-300 font-semibold"> Python</span>,
+        <span className="text-cyan-300 font-semibold"> PHP</span>,
+        <span className="text-cyan-300 font-semibold"> HTML</span> y
+        <span className="text-cyan-300 font-semibold"> CSS</span>; así como con bases de datos como
         <span className="text-blue-400 font-semibold"> MySQL</span>,
         <span className="text-blue-400 font-semibold"> PostgreSQL</span>,
         <span className="text-blue-400 font-semibold"> SQLite</span> y
-        <span className="text-green-400 font-semibold"> MongoDB</span>. Trabajo
-        con frameworks y tecnologías como
+        <span className="text-green-400 font-semibold"> MongoDB</span>.  
+        También he trabajado con frameworks y tecnologías como
         <span className="text-purple-400 font-semibold"> React</span>,
         <span className="text-purple-400 font-semibold"> Next.js</span>,
         <span className="text-purple-400 font-semibold"> React Native</span>,
@@ -60,13 +59,12 @@ const About: React.FC = () => {
         <span className="text-cyan-400 font-semibold"> Node.js</span>,
         <span className="text-cyan-400 font-semibold"> Express</span>,
         <span className="text-yellow-400 font-semibold"> Electron</span> y
-        <span className="text-cyan-400 font-semibold"> Tailwind CSS</span>,
-        aplicando metodologías ágiles
+        <span className="text-cyan-400 font-semibold"> Tailwind CSS</span>, aplicando metodologías ágiles
         <span className="text-orange-400 font-semibold"> Scrum</span> y
         <span className="text-orange-400 font-semibold"> Kanban</span>.
       </motion.p>
 
-      {/* Typing con efecto de entrada */}
+      {/* Typing effect */}
       <div className="mt-6 h-10 flex justify-center items-center text-2xl md:text-3xl font-semibold text-cyan-400">
         <motion.div
           key={currentWord}
